@@ -3,28 +3,33 @@
     src: url(./fonts/SourceSansPro-Regular.otf);
 }
 
+*:focus {
+    outline: none;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
     font-family: source sans pro;
     overflow-x: hidden;
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 230px;
-    height: 100%;
-    background-color: #121314;
-    color: #fff;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    transition: 400ms;
-    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.315);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 97%;
+  background-color: #121314;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  transition: 400ms;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.515);
+  margin-left: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 a { text-decoration: none; }
@@ -42,7 +47,7 @@ a:hover, a:active { text-decoration: none; }
 }
 
 .email{
-    font-size: 12px;
+    font-size: 10.5px;
     font-family: source sans pro;
     color: #8a8a8a;
 }
@@ -91,11 +96,10 @@ a:hover, a:active { text-decoration: none; }
 }
 
 .sidebar-menu {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 17.5px;
-    overflow-x: hidden;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 .menu-item {
@@ -121,8 +125,7 @@ a:hover, a:active { text-decoration: none; }
 .user-info {
     display: flex;
     align-items: center;
-    background: linear-gradient(181deg, rgb(152 45 163 / 26%) 3.6%, rgb(116 9 176 / 7%) 90.4%);
-    border-radius: 10px;
+    background: linear-gradient(181deg, rgb(18, 19, 20) 3.6%, rgba(73, 37, 94, 0.7) 90.4%);    border-radius: 10px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     display: flex;
@@ -138,11 +141,10 @@ a:hover, a:active { text-decoration: none; }
 }
 
 .user-info img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-left: 0px;
-    margin-right: 8px;
+  width: 43px;
+  height: 43px;
+  border-radius: 20%;
+  margin-left: -2px;
 }
 
 .user-details {
@@ -208,13 +210,12 @@ a:hover, a:active { text-decoration: none; }
 }
 
 .logo {
-    width: 28px;
-    margin-left: 6px;
+  width: 34px;
+  margin-left: 3px;
 }
 
 #sidebar-title {
     margin-left: 20px;
-    transition-delay: 100ms;
 
     font-family: source sans pro;
     letter-spacing: 9px;
@@ -223,7 +224,8 @@ a:hover, a:active { text-decoration: none; }
 
 hr{
     width: calc(90% - 5px);
-    opacity: 0.6;
+    opacity: 0.2;
+    color: white;
 }
 
 .menu-item {
@@ -232,10 +234,6 @@ hr{
     
 }
 
-.menu-item:hover{
-    opacity: 0.75;
-    transition: 200ms;
-}
 
 .menu-item:active{
     transform: scale(0.955);
@@ -249,7 +247,6 @@ hr{
 .sidebar-bottom img{
     user-select: none;
     transition: 200ms;
-    border: 2px solid white;
 }
 
 .sidebar-bottom img:hover{
@@ -262,8 +259,16 @@ hr{
 }
 
 .logout-btn svg{
-    margin-top: 17px;
-    margin-right: 8px;
+  margin-top: 21px;
+  margin-right: 4px;
+  padding: 5px;
+}
+
+.logout-btn svg:hover{
+  background-color: rgba(0, 0, 0, 0.474);
+  transition: 200ms;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .login-item{
@@ -302,8 +307,9 @@ hr{
     border-radius: 100%;
     background-color: #121314;
     border: none;
-    width: 27px;
-    height: 27px;
+    width: 32px;
+    height: 32px;
+    line-height: 40px;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
     transition: 200ms;
@@ -324,7 +330,6 @@ hr{
 }
 
 #sidebar-toggle.mirrored {
-    transform: scale(-1);
     top: 25px;
     right: -14px;
 }
@@ -333,10 +338,12 @@ hr{
     width: 60px;
 }
 
-.sidebar.collapsed #sidebar-title {
-    opacity: 0;
-    transition-delay: 0;
-    pointer-events: none; /* To make sure it's not clickable when hidden */
+#sidebar-title {
+    transition: opacity 0.3s;
+}
+
+#sidebar.expanded #sidebar-title {
+    opacity: 1;
 }
 
 #userDetails {
@@ -353,11 +360,15 @@ hr{
   .event-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #181818;
+    color: white;
+    width: min-content;
+    min-width: fit-content;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.515);
+
   }
   
   .event-image {
@@ -366,11 +377,13 @@ hr{
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
+    align-self: center;
   }
   
   .event-title {
     font-size: 1.5em;
     margin-bottom: 8px;
+    align-self: center;
   }
   
   .event-description {
@@ -424,16 +437,15 @@ hr{
   
   #eventForm {
     display: none;
-    position: fixed;
     flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
-    left: 50%;
-    transform: translate(-50%, 0);
     background-color: darkgray;
     width: 300px;
-    margin-top: 20px;
+    position: absolute;
+    top: 12px;
+    left: 35%;
   }
   
   #eventForm input, #eventForm textarea {
@@ -452,6 +464,7 @@ hr{
   
   #events-content{
     display: flex;
+    flex-direction: column-reverse;
   }
 
   .notification{
@@ -486,10 +499,9 @@ hr{
   }
 
   #createEventButton{
-        position: absolute;
-    top: 0;
-    right: 50%;
-  }
+    margin-left: 15px;
+    width: 79%;
+}
 
   .comment {
     display: flex;
@@ -542,9 +554,10 @@ hr{
 }
 
 .report-form{
-position: absolute;
-top: 20px;
-right: 70%;
+position: fixed;
+left: 50%;
+transform: translate(-50%, 0);
+top: 10px;
 }
 
 .comment button{
@@ -552,21 +565,20 @@ right: 70%;
     right: 5px;
 }
 
-#eventsContainer{
+.dropdown-menu button{
+    right: 0px;
 }
 
-/* CSS */
-
-/* Default styles */
 #sidebar {
-    width: 230px; /* Adjust as needed */
+    width: 60px; /* Adjust as needed */
     transition: width 0.3s ease; /* Add transition for smooth animation */
+    overflow-x: hidden;
   }
   
   #content {
-    margin-left: 260px; /* Adjust margin for expanded state */
-
+    margin-left: 70px; /* Adjust margin for expanded state */
     transition: margin-left 0.3s ease; /* Add transition for smooth animation */
+    /* transition-delay: 550ms; */
   }
   
   /* Styles for collapsed sidebar */
@@ -575,6 +587,126 @@ right: 70%;
   }
   
   #content.expanded {
-    margin-left: 90px; /* Adjust margin for expanded state */
+    margin-left: 240px; /* Adjust margin for expanded state */
+    transition-delay: 0ms;
   }
   
+  .edit-comment{
+margin-top: 20px;
+  }
+
+  .delete-comment{
+    margin-top: 40px;
+  }
+
+  #sidebar:hover{
+    width: 230px;
+    transition-delay: 0ms;
+    
+  }
+
+  #sidebar{
+    /* transition-delay: 550ms; */
+  }
+
+  .nav-bar{
+    display: flex;
+    background-color: white;
+    justify-content: right;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    font-family: source sans pro;
+    user-select: none;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #search{
+    left: 20px;
+    position: absolute;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    font-family: source sans pro;
+  }
+
+  #event-bucket{
+    margin-right: 10px;
+  }
+
+  .bar-icon{
+    cursor: pointer;
+  }
+
+  .bar-icon:hover{
+    opacity: 0.75;
+    transition: 200ms;
+}
+.bar-icon:active{
+    transform: scale(0.9);
+    transition: 200ms;
+}
+
+form.nosubmit {
+  border: none;
+  padding: 0;
+}
+
+input.nosubmit {
+  width: 260px;
+  border: 1px solid #555;
+  display: block;
+
+  padding: 9px 4px 9px 40px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+#mapContainer {
+  height: 400px;
+  width: 100%;
+  display: none;
+}
+
+.not-limited-container{
+  display: flex;
+}
+
+#eventsContainer{
+  display: flex;
+}
+
+#home-content, #events-content, #calendar-content, #tournaments-content{
+  padding: 25px;
+  padding-top: 13px;
+}
+
+
+.menu-item:hover {
+  background-color: rgb(45, 42, 42);
+  border-radius: 5px;
+  color: white;
+  transition: 200ms;
+}
+
+.menu-item{
+  transition: 200ms;
+  padding: 8px;
+}
+
+#dark-light-toggle{
+  margin-top: -10px;
+}
+
+#homeButton{
+  margin-top: -22px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+
+}

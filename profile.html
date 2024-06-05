@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="profile-container">        
+    <a href="index.html">Home</a>
+      <div id="profile-container">
+        <div id="profile-info">
+          <img id="profile-img" src="" alt="User Image">
+          <p id="profile-name"></p>
+          <p id="profile-email"></p>
+        </div>
+    
+        <div id="user-events">
+          <h2>Events Posted by User</h2>
+          <div id="eventsContainer"></div>
+        </div>
+      </div>
+    
+</div>
+
+<style>#profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#profile-info{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+    </style>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

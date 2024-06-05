@@ -1,0 +1,70 @@
+   /* Add your styles here */
+   body {
+    font-family: Arial, sans-serif;
+}
+.profile-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.user-profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.events-container {
+    margin-top: 30px;
+}
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.event-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+.event-details {
+    text-align: left;
+}
+.event-details h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.event-details p {
+    margin: 5px 0;
+}
+
+#sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  #content {
+    margin-left: 230px;
+    padding: 20px;
+  }
+  .content-section {
+    display: none;
+  }
+  .content-section.active {
+    display: block;
+  }
+  .sidebar-button {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
